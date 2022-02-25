@@ -1,5 +1,6 @@
 package com.example.sarvarkhalmatov_exam_module_5.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +17,7 @@ class SplashActivity : AppCompatActivity() {
     private var viewPagerAdapter: ViewPagerAdapterSplash? = null
     private var viewPager: ViewPager? = null
     var wormDotsIndicator: WormDotsIndicator? = null
-    var text_done = findViewById<TextView>(R.id.tv_next)
+    lateinit var text_done :TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        text_done = findViewById(R.id.tv_next)
         viewPager = findViewById(R.id.view_pager)
         viewPagerAdapter = ViewPagerAdapterSplash(supportFragmentManager)
         wormDotsIndicator = findViewById(R.id.worm_dots_indicator)
@@ -44,8 +46,15 @@ class SplashActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                  if(position == 3){
                      text_done.text = "Done"
+
+                     text_done.setOnClickListener {
+                         val intent = Intent(this@SplashActivity,MainActivity::class.java)
+                         startActivity(intent)
+                         //save it in sharedPreference
+                         finish()
+                     }
                  }else{
-                     text_done.text = "Done"
+                     text_done.text = "Next"
                  }
             }
 

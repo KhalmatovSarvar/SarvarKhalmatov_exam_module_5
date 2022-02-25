@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_home"
+        android:title="Home"
+        android:checked="true"
+        android:icon="@drawable/ic_home"
+       />
+    <item
+        android:id="@+id/ic_filter"
+        android:title="Collections"
+        android:icon="@drawable/ic_filter"/>
+    <item
+        android:id="@+id/ic_comment"
+        android:title="Messages"
+        android:icon="@drawable/ic_comment_navigation"/>
+    <item
+        android:id="@+id/ic_search"
+        android:title="Search"
+        android:icon="@drawable/ic_search"/>
+</menu>
