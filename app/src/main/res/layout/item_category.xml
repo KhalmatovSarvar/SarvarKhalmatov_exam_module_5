@@ -7,7 +7,7 @@
     android:background="@drawable/item_text_rounded_corner">
 
     <ImageView
-        android:layout_margin="4dp"
+        android:layout_margin="1dp"
         android:id="@+id/iv_item_category"
         android:layout_width="match_parent"
         android:layout_height="0dp"
